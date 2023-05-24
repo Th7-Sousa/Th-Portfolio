@@ -1,0 +1,65 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+}
+
+.subContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container h1 {
+    font-size: 28px;
+}
+
+.whatsapp h3, .email h3, .social h3 {
+    color: #CC3CFF;
+    border-bottom: #CC3CFF 1px solid;
+    max-width: max-content;
+    padding-bottom: 3px;
+}
+
+.whatsapp, .email, .social{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.whatsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.whatsapp a {
+    cursor: pointer;
+    background-color: #f2672e;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+}
+.imgWhats {
+    width: 15rem;
+}
+
+.contentEmail {
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+.contentEmail img {
+    width: 1.7rem;
+}
+
+.contentSocial {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.iconSocial {
+    width: 2.5rem;
+}
