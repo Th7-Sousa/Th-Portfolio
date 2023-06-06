@@ -1,8 +1,10 @@
+"use client"
 
 import "./globals.css";
 import styles from "./page.module.css";
 import { Inter } from "next/font/google";
-import Link from "next/link";
+import { usePathname } from 'next/navigation';
+import ActiveLink from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,18 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
 
-  const style = {
-    marginRight: 10,
-    color: 'black',
-  };
-
-
+  const pathname = usePathname()
+  console.log(pathname)
 
   return (
     <html lang="pt-br">
       <body className={inter.className}>
         <main className={styles.main}>
           <div className={styles.containerBlur}>
+
             <nav className={styles.nav}>
               <div className={styles.logoContainer}>
                 <a className={styles.logoBackHome} href="index.html">
@@ -36,24 +35,25 @@ export default function RootLayout({
                   <img src="/images/iconth.svg" alt="Image-th" />
                 </a>
               </div>
+
               <div className={styles.navMenu}>
-                <Link id="linkHome" className={styles.menuLink} href="/">
+                <ActiveLink href='/'>
                   Home
-                </Link>
-                <Link id="menuLink" className={styles.menuLink} href="/portfolio">
+                </ActiveLink>
+                <ActiveLink href='/portfolio'>
                   Portifólio
-                </Link>
-                <Link id="menuLink" className={styles.menuLink} href="/contact">
+                </ActiveLink>
+                <ActiveLink href='/contact'>
                   Contato
-                </Link>
+                </ActiveLink>
               </div>
             </nav>
 
             <section className={styles.containerCenter}>{children}</section>
           </div>
           <footer className="footer">
-          <p className={styles.copyright}>Th Web Designer 2023 - Alguns direitos resevardos</p>
-        </footer>
+            <p className={styles.copyright}>Th Web Designer 2023 - Alguns direitos resevardos</p>
+          </footer>
         </main>
       </body>
     </html>

@@ -1,5 +1,5 @@
+import Image from "next/image";
 import styles from "./contact.module.css";
-import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -7,12 +7,13 @@ export default function Contact() {
       <h1>Entre em contato para fazer um orçamento:</h1>
 
       <div className={styles.subContainer}>
-
         <div className={styles.whatsapp}>
           <h3>Whatsapp</h3>
           <div className={styles.whatsContainer}>
-            <img
-              className={styles.imgWhats}
+            <Image
+              width={240}
+              height={250}
+              className={styles.ImageWhats}
               src="/images/qr-whatsapp.jpg"
               alt="QR code - Whatsapp"
               title="Código QR do Whatsapp"
@@ -25,7 +26,12 @@ export default function Contact() {
         <div className={styles.email}>
           <h3>Email</h3>
           <div className={styles.contentEmail}>
-            <img src="/images/icon-email.svg" alt="Ícone de email" />
+            <Image
+              width={50}
+              height={50}
+              src="/images/icon-email.svg"
+              alt="Ícone de email"
+            />
             <p>thiagof.profissional@gmail.com</p>
           </div>
         </div>
@@ -33,29 +39,36 @@ export default function Contact() {
         <div className={styles.social}>
           <h3>Redes sociais</h3>
           <div className={styles.contentSocial}>
+            <div className={styles.linkedin}>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/thiago-fernandes-de-sousa/"
+              >
+                <Image
+                  width={50}
+                  height={40}
+                  className={styles.iconSocial}
+                  src="/images/icon-linkedin.png"
+                  alt="Linkendin"
+                  title="Linkedin"
+                />
+              </a>
+            </div>
 
-           <div className={styles.linkedin}>
-            <a href="">
-              <img className={styles.iconSocial} src="/images/icon-linkedin.png" alt="Linkendin" title="Linkedin"/>
-            </a>
-           </div>
-
-           <div className={styles.linkedin}>
-            <a href="">
-              <img className={styles.iconSocial} src="/images/icon-instagram.svg" alt="Instagram" title="Instagram"/>
-            </a>
-           </div>
-
-           <div className={styles.linkedin}>
-            <a href="">
-              <img className={styles.iconSocial} src="/images/icon-github.png" alt="Github" title="Github"/>
-            </a>
-           </div>
-
-           </div>
-
+            <div className={styles.linkedin}>
+              <a target="_blank" href="https://github.com/Th7-Sousa">
+                <Image
+                  width={50}
+                  height={40}
+                  className={styles.iconSocial}
+                  src="/images/icon-github.png"
+                  alt="Github"
+                  title="Github"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-
       </div>
     </div>
   );

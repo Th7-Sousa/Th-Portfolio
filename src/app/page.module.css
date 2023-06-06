@@ -6,6 +6,7 @@
   align-items: center;
   min-height: 100vh;
   padding-bottom: 0.5rem;
+  gap: 1rem;
 }
 
 .containerBlur {
@@ -31,15 +32,8 @@
 
 /* NAVBAR */
 
-.activeLink {
-    color: #F2672E;
-    border-bottom: 1px solid #F2672E;
-    padding-bottom: 1px;
-  }
-  
-
 .nav {
-    max-width: 55%;
+    max-width: 58%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,14 +60,13 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    
 }
 
 .menuLink {
     padding: 4px;
 }
 .menuLink:hover {
-    color: #F2672E;
+    color: #F2952C;
 }
 
 
@@ -120,13 +113,14 @@
     text-align: justify;
 }
 .btnContact {
+    max-width: 14rem;
     background-color: #F2672E;
     color: #fff;
     text-align: center;
     padding: 0.8rem 0;
     border-radius: 5px;
     border: none;
-    font-size: 17px;
+    font-size: 18px;
 
     box-shadow: 3px 3px 17px 0px rgba(0,0,0,0.77);
     -webkit-box-shadow: 3px 3px 17px 0px rgba(0,0,0,0.77);
@@ -135,6 +129,7 @@
 .btnContact:hover {
     transform: scale(1.1);
     transition: all 0.8s;
+    background-color: #F2952C;
 }
 .arrowRight {
     padding-left: 8px;
@@ -157,4 +152,28 @@
 
 .copyright {
     font-size: 13px;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 1000px) {
+    .containerBlur {
+        padding: 2rem 4rem; 
+    }
+}
+@media(max-width: 900px) {
+    .containerBlur {
+        padding: 2rem 1.5rem; 
+    }
+}
+
+@media(max-width:1228px) {
+    .containerBlur {
+        width: 60%;
+        align-items: center;
+    }
+    .main {
+        align-items: left;
+    }
 }
